@@ -53,7 +53,7 @@ Password for level 5 -lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
 The file is in one of the multiple subdirectories of the directory inhere
 It has a size of 1033 bytes , is human readable and is inexecutable
 Commands used-
-`ls -a`  It lists all the files hidden too.
+`ls -a`  It lists all the files hidden too.  
 `ls -lh` it lists the file sizes but it does not list the sizes of hidden files
 `ls attr` - lists the attributes 
 `find ./ -type f -size 1033c` - it will find all the files(hidden too)  with size 1033 bytes under the directory and all its subsequent directories because (./) -type f : so only regular files are searched for .
@@ -69,32 +69,32 @@ find / -user bandit7 -group bandit6 -type f - size 33c
 It found a lot of files to and among them access to only one file was allowed the password was in it.
 Password for level 7: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
 
- Level 7 
+ ## Level 7 
 The password for the next level is stored in the file data.txt next to the word millionth
 Command used
 cat data.txt | grep millionth 
 The grep command is used to identify a specific pattern or some word in a big file and highlights it in the output we can use grep for a particular name,word,symbol etc.
 Password for Level 8:TESKZC0XvTetK0S9xNwm25STk5iWrBvP
-Level 8 
+## Level 8 
 The password for the next level is stored in the file data.txt and is the only line of text that occurs only once
 Here sort command and uniq commands have to be used but these commands do not alter the input file and just show the output. Here comes the concept of redirecting and pipelining , but the file only had read permissions so redirecting ‘>’  is not possible as we cannot create another file and write output into that so we will use piping ‘|’ which sends output from one program(on the left) as input to another program (on the right).
 Command used:
 Cat data.txt | sort | uniq -u
 sort  command sorts the data alphabetically and uniq-u only prints the unique line 
 Password for level 9: EN632PlfYiZbn3PhVK3XOGSlNInNE00t
-Level 9:
+## Level 9:
 The password for the next level is stored in the file data.txt in one of the few human-readable strings, preceded by several ‘=’ characters.
 Command used:
 cat data.txt | strings | grep ‘=’
 The strings command will identify and print only the strings from the file. It can be used to find a particular string , string sequence etc. when used raw it returns all the strings in a file . grep will highlight the = occurring in the file 
 Password for level 10 : G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
-Level 10:
+## Level 10:
 The password for the next level is stored in the file data.txt, which contains base64 encoded data
 Command used:
 cat data.txt | base64 -d
 Base64 -d decodes the encoded data in base64. 
 Password for level 11: 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM 
-Level 11 
+## Level 11 
 The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
 Here on reading the file we have that all the letters are following the sequence where each letter is moved forward 13 positions ( suppose if it is A , it will be equivalent to N ) 
 Commands used:
@@ -102,7 +102,7 @@ cat data.txt
 cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 tr  command will translate A-Z to N-Z and on reaching Z it will start from A-M and same with lowercase alphabets.
 Password for level 12: JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
-Level 12 
+## Level 12 
 The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work using mkdir. For example: mkdir /tmp/myname123. Then copy the datafile using cp, and rename it using mv 
 
 Here we will first have to create our own directory because the current directory doesn’t grant us the permission to perform changes on data.txt 

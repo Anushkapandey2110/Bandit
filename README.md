@@ -52,7 +52,7 @@ Password for level 5 -lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
 ## Level 5 
 The file is in one of the multiple subdirectories of the directory inhere
 It has a size of 1033 bytes , is human readable and is inexecutable
-Commands used- 
+Commands used-
 `ls -a`  It lists all the files hidden too.
 `ls -lh` it lists the file sizes but it does not list the sizes of hidden files
 `ls attr` - lists the attributes 

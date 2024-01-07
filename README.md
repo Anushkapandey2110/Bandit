@@ -189,8 +189,26 @@ Then we will give in the password of the current level
 ```
 fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
 ```
-Password for level 15: 
+Password for level 15 is:
 ```
 jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+```
+## Level 15 
+The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL encryption.
+Commands used: 
+openssl s_client -connect <hostname>:<port> 
+(The s_client command implements a generic SSL/TLS client which connects to a remote host using SSL/TLS. It is a very useful diagnostic tool for SSL servers.)
+(-connect host:port option This specifies the host and optional port to connect to) 
+Here. 
+```
+openssl s_client -connect localhost:30001
+```
+After that submit the password 
+```
+jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+```
+Password for Level 16: 
+```
+JQttfApK4SeyHwDlI9SXGR50qclOAil1
 ```
 

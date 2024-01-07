@@ -199,7 +199,7 @@ Commands used:
 openssl s_client -connect <hostname>:<port> 
 (The s_client command implements a generic SSL/TLS client which connects to a remote host using SSL/TLS. It is a very useful diagnostic tool for SSL servers.)
 (-connect host:port option This specifies the host and optional port to connect to) 
-Here. 
+Here.  
 ```
 openssl s_client -connect localhost:30001
 ```
@@ -212,10 +212,5 @@ Password for Level 16:
 JQttfApK4SeyHwDlI9SXGR50qclOAil1
 ```
 ## Resources used 
-(geeksforgeeks.com) \n
-(openssl.org)
-(linuxhint.com)
-(howtouselinix.com)
-(scaler.com)
-(wikipedia.org)
+https://www.geeksforgeeks.org/
 

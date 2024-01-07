@@ -211,4 +211,11 @@ Password for Level 16:
 ```
 JQttfApK4SeyHwDlI9SXGR50qclOAil1
 ```
+## Resources used 
+[geeksforgeeks.com]
+[openssl.org]
+[linuxhint.com]
+[howtouselinix.com]
+[scaler.com]
+[wikipedia.org]
 

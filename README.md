@@ -161,3 +161,36 @@ Password for level 13:
 wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
 ```
 ## Level 13
+The password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. Note: localhost is a hostname that refers to the machine you are working on. 
+In this level we have a private key stored in sshkey.private so we have to login to the next level using this private key instead of a usual password and then get the password stored in  /etc/bandit_pass/bandit14
+that can be accessed by user bandit14. 
+Commands Used: 
+man ssh (To learn about the different options available for ssh command). 
+ssh bandit14@bandit.labs.overthewire.org -p 2220 -i sshkey.private (The -i option is used for specifying the identity file . In this case the identity file sshkey.private has the private key with the help of which we got the authentication for the next level. 
+After entering level 14 
+cat /etc/bandit_pass/bandit14 
+The password for level 14 is- 
+```
+fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
+```
+## Level 14 
+The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost. 
+Here we have to connect to the port number 30000 of the localhost i.e. the machine we are working on 
+Commands used- 
+Here we will use the nc (netcat command) which acts like a cat command over a network. It is used for a number of reasons but here we will use its port redirecting function. Other functions are port scanning , open remote connections , port listening etc.
+Syntax: 
+nc <options> <hostname> <port>
+here: 
+we will use the connect mode of the nc command where Netcat works as a client. Which means that it establishes a connection to a remote server or servers. To work in this mode, we have to provide the `<host>` and `<port>` parameters.
+```
+nc localhost 30000
+```
+Then we will give in the password of the current level 
+```
+fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
+```
+Password for level 15: 
+```
+jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+```
+
